@@ -293,6 +293,10 @@ html {
     text-indent: 2em;
 }
 
+.content img {
+    padding-left: 9em;
+}
+
 .content p::first-letter {
     font-weight: bold;
 }
