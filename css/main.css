@@ -281,9 +281,13 @@ html {
     padding-left: 0;
 }
 
+.content p:first-of-type {
+    padding-top: 6em;
+}
+
 
 .content p {
-    width: 80%;
+    width: 60%;
     font: 1.5em/1.2em "Open Sans", Sans-Serif;
     padding-left: 5.9em;
     text-indent: 2em;
