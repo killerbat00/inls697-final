@@ -111,6 +111,15 @@ html {
     color: black;
 }
 
+#fullpage {
+    background: #e5e5e5;
+    background-repeat: repeat;
+}
+
+.home {
+    background: url(../img/pg.jpg) no-repeat center center fixed;
+}
+
 .line {
     position: fixed;
     width: 100%;
@@ -211,12 +220,6 @@ html {
     background: rgba(0, 0, 0, 0.6);
     padding: 10px;
 }
-
-
-.section:not(:first-child) {
-    background: #e5e5e5;
-}
-
 
 .topics {
     height: 100%;

@@ -52,24 +52,16 @@
     }).mouseout(function() {
         $(this).find("span").css("color", "white")
     });
+
+    if (document.location.hash === "#home" || document.location.hash === "") {
+        $("#fullpage").css('background', 'url(../img/pg.jpg) no-repeat center center fixed');
+    }
     $(window).scroll(function() {
-	$(".active").css('background-image', 'none');
+	$("#fullpage").css('background-image', 'none');
         clearTimeout($.data(this, 'scrollTimer'));
         $.data(this, 'scrollTimer', setTimeout(function() {
-        // do something
-	var ah = $(".active").offset().top;
-	var dh = $(document).scrollTop();
-	if (dh >= ah-250) {
-	    $(".active").css('background-image', 'url(../img/bg.png)');
-	} else {
-		$(".section").css('background-image', 'none');
-	    	$(".active").css('background-image', 'none');
-	}
-	if (document.location.hash === "#home" || document.location.hash === "") {
-	    $(".section").css('background-image', 'none');
-	    $(".active").css('background-image', 'none');
-	}
-        }, 100));
+            $("#fullpage").css('background-image', 'url(../img/bg.png)');
+        }, 125));
     });
 
     //make topics clickable
@@ -113,7 +105,7 @@
             "humanities",
             "memes",
             "otaku",
-	    "genlike",
+	        "genlike",
             "about"],
 		navigation: true,
 		autoScrolling: false,
@@ -132,4 +124,6 @@
             }
         }
     });
+    $("#fullpage").css("background-color", "#e5e5e5");
+    $("#fullpage").css('background-repeat', 'repeat');
 }(jQuery));
