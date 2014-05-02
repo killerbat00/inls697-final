@@ -255,7 +255,7 @@ html {
     width: 100%;
 }
 
-.content span {
+.content h2 span {
     color: rgb(250, 250, 240);
     font: 3em/1em "ChunkFiveRoman", Sans-Serif;
     font-weight: 900;
@@ -263,6 +263,13 @@ html {
     padding: .2em;
     padding-left: 1.7em;
     padding-right: 1em;
+}
+
+.content span {
+    color: black;
+    font: 1em/1em "Lato", Sans-Serif;
+    background: #ff6600;
+    padding-left: 9em;
 }
 
 .content p#frst {
