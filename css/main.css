@@ -179,7 +179,7 @@ html {
 }
 
 .home span {
-    color: #fafaf0;
+    color: white;
     font: 3em/1em "ChunkFiveRoman", Sans-Serif;
     font-weight: 900;
     letter-spacing: -1px;
@@ -197,7 +197,7 @@ html {
 
 .scroll a, .scroll a:visited {
     text-decoration: none;
-    color: #fafaf0;
+    color: #cccccc;
 }
 
 .scroll a:hover {
@@ -212,9 +212,11 @@ html {
     padding: 10px;
 }
 
+
 .section:not(:first-child) {
-    background: rgb(250, 250, 240);
+    background: #e5e5e5;
 }
+
 
 .topics {
     height: 100%;
@@ -229,7 +231,7 @@ html {
 
 .topic h2 span {
     width: 100%;
-    color: rgb(250, 250, 240);
+    color: white;
     font-weight: 300;
     font: 1.4em/1.4em "Lato", Sans-Serif;
     letter-spacing: -2px;
@@ -256,7 +258,7 @@ html {
 }
 
 .content h2 span {
-    color: rgb(250, 250, 240);
+    color: white;
     font: 3em/1em "ChunkFiveRoman", Sans-Serif;
     font-weight: 900;
     background: rgb(0, 0, 0);

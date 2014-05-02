@@ -22,8 +22,8 @@
         "Memes and Remixes", 
         "Otaku",
 	"Generation Like",
-        "About", 
-        "Credits"];
+        "About"
+        ];
 
     //stop ugly arrow key behavior
     $(document).keydown(function(e) {
@@ -51,6 +51,25 @@
         $(this).find("span").css("color", "black");
     }).mouseout(function() {
         $(this).find("span").css("color", "white")
+    });
+    $(window).scroll(function() {
+	$(".active").css('background-image', 'none');
+        clearTimeout($.data(this, 'scrollTimer'));
+        $.data(this, 'scrollTimer', setTimeout(function() {
+        // do something
+	var ah = $(".active").offset().top;
+	var dh = $(document).scrollTop();
+	if (dh >= ah-250) {
+	    $(".active").css('background-image', 'url(../img/bg.png)');
+	} else {
+		$(".section").css('background-image', 'none');
+	    	$(".active").css('background-image', 'none');
+	}
+	if (document.location.hash === "#home" || document.location.hash === "") {
+	    $(".section").css('background-image', 'none');
+	    $(".active").css('background-image', 'none');
+	}
+        }, 100));
     });
 
     //make topics clickable
@@ -95,8 +114,7 @@
             "memes",
             "otaku",
 	    "genlike",
-            "about",
-            "credits"],
+            "about"],
 		navigation: true,
 		autoScrolling: false,
         paddingTop: "5em",
@@ -105,11 +123,13 @@
         afterLoad: function(al, index) {
             if (index === 1) {
                 $nav.slideUp("slow");
+		$("html").css('background', 'url(../img/pg.jpg) no-repeat center center fixed');
             }
             if (index === 2) {
+		$("html").css('background', 'none');
                 $nav.removeClass("invisible");
                 $nav.slideDown("slow");
             }
         }
-	});
+    });
 }(jQuery));
